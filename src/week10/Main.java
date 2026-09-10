@@ -65,32 +65,50 @@ public class Main {
 //            milkingRobot.milk(cow);
 //            System.out.println("Bulk tank: " + tank);
 //            System.out.println("");
-        Barn barn = new Barn(new BulkTank());
-        System.out.println("Barn: " + barn);
+//        Barn barn = new Barn(new BulkTank());
+//        System.out.println("Barn: " + barn);
+//
+//        MilkingRobot robot = new MilkingRobot();
+//        barn.installMilkingRobot(robot);
+//
+//        Cow ammu = new Cow();
+//        ammu.liveHour();
+//        ammu.liveHour();
+//
+//        barn.takeCareOf(ammu);
+//        System.out.println("Barn: " + barn);
+//
+//        ArrayList<Cow> cowList = new ArrayList<Cow>();
+//        cowList.add(ammu);
+//        cowList.add(new Cow());
+//
+//        for(Cow cow: cowList) {
+//            cow.liveHour();
+//            cow.liveHour();
+//        }
+//
+//        barn.takeCareOf(cowList);
+//        System.out.println("Barn: " + barn);
 
+//        Farm farm = new Farm("Esko", new Barn(new BulkTank()));
+//        System.out.println(farm);
+//
+//        System.out.println(farm.getOwner() + " is a tough guy!");
+        Farm farm = new Farm("Esko", new Barn(new BulkTank()));
         MilkingRobot robot = new MilkingRobot();
-        barn.installMilkingRobot(robot);
+        farm.installMilkingRobot(robot);
 
-        Cow ammu = new Cow();
-        ammu.liveHour();
-        ammu.liveHour();
-
-        barn.takeCareOf(ammu);
-        System.out.println("Barn: " + barn);
-
-        ArrayList<Cow> cowList = new ArrayList<Cow>();
-        cowList.add(ammu);
-        cowList.add(new Cow());
-
-        for(Cow cow: cowList) {
-            cow.liveHour();
-            cow.liveHour();
-        }
-
-        barn.takeCareOf(cowList);
-        System.out.println("Barn: " + barn);
+        farm.addCow(new Cow());
+        farm.addCow(new Cow());
+        farm.addCow(new Cow());
 
 
+        farm.liveHour();
+        farm.liveHour();
+
+        farm.manageCows();
+
+        System.out.println(farm);
         }
     }
 
