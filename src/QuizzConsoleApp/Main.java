@@ -40,7 +40,7 @@ public class Main {
         Scanner q2 = new Scanner(System.in);
         System.out.println("Enter the right answer 1-4:");
         int answer2 = q2.nextInt();
-        if (answer1 == 1) {
+        if (answer2 == 1) {
             System.out.println("Correct!");
         } else {
             System.out.println("Wrong!");
@@ -54,6 +54,7 @@ public class Main {
         question3.opt2 = "new";
         question3.opt3 = "this";
         question3.opt4 = "void";
+        question3.answer = "new";
         question3.printInfo();
         Scanner q3 = new Scanner(System.in);
         System.out.println("Enter the right answer 1-4:");
@@ -62,7 +63,7 @@ public class Main {
             System.out.println("Correct!");
         } else {
             System.out.println("Wrong!");
-            System.out.println("Correct answer: " + question2.answer);
+            System.out.println("Correct answer: " + question3.answer);
         }
     }
 }
